@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸른투어 챗봇 위젯</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="chatbot-container">
+        <div id="chat-header">
+            <div class="header-content">
+                <h1 id="chat-title">푸른투어 챗봇</h1>
+                <div class="connection-status" id="connection-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">연결중...</span>
+                </div>
+            </div>
+        </div>
+        <div id="chat-messages">
+            <!-- 메시지들이 여기에 동적으로 추가됩니다 -->
+        </div>
+        <div id="chat-input">
+            <input type="text" id="message-input" placeholder="여행 관련 질문을 입력하세요...">
+            <button id="send-button" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
